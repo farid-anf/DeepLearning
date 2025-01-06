@@ -34,9 +34,9 @@ The decision boundary is typically set at 0.5. If $P(y=1 | \mathbf{x}) \geq 0.5$
 
 #### 3. **Cost Function**
 Logistic regression uses the **log-loss** (cross-entropy loss) as its cost function:
-$$
-J(\mathbf{w}, b) = -\frac{1}{m} \sum_{i=1}^{m} \left[ y^{(i)} \log(\hat{y}^{(i)}) + (1 - y^{(i)}) \log(1 - \hat{y}^{(i)}) \right]
-$$
+
+$$J(\mathbf{w}, b) = -\frac{1}{m} \sum_{i=1}^{m} \left[y^{(i)} \log(\hat{y}^{(i)}) + (1 - y^{(i)}) \log(1 - \hat{y}^{(i)}) \right]$$
+
 Where:
 - $m$: number of training examples
 - $y^{(i)}$: actual label (0 or 1) for the \(i\)-th example
