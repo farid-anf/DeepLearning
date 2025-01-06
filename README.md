@@ -25,9 +25,8 @@ Where $z = \mathbf{w}^\top \mathbf{x} + b$, which is the linear combination of i
 
 #### 2. **Prediction**
 The model predicts probabilities:
-$$
-P(y=1 | \mathbf{x}) = \sigma(z)
-$$
+
+$$P(y=1 | \mathbf{x}) = \sigma(z)$$
 
 The decision boundary is typically set at 0.5. If $P(y=1 | \mathbf{x}) \geq 0.5$, the model predicts $y=1$; otherwise, it predicts $y=0$.
 
