@@ -1,5 +1,73 @@
 # DeepLearning
 
+## Gradient Descent 
+
+
+Gradient descent is an optimization algorithm used to minimize a function by iteratively moving in the direction of its steepest descent, which is determined by the negative of the gradient.
+
+### Mathematical Explanation
+
+#### Objective Function
+Suppose we want to minimize a function  $f(\boldsymbol{\theta})$, where  $\boldsymbol{\theta}$ is a vector of parameters. The goal is to find the value of $\boldsymbol{\theta}$ that minimizes $f(\boldsymbol{\theta})$.
+
+#### Gradient
+The gradient of $f$ at $\boldsymbol{\theta}$, denoted by $\nabla f(\boldsymbol{\theta})$, is a vector of partial derivatives:
+
+
+$$\nabla f(\boldsymbol{\theta}) = \left[ \frac{\partial f}{\partial \theta_1}, \frac{\partial f}{\partial \theta_2}, \ldots, \frac{\partial f}{\partial \theta_n} \right]^T.$$
+
+The gradient points in the direction of the steepest increase of $f$.
+
+#### Update Rule
+Gradient descent updates $\boldsymbol{\theta}$ iteratively:
+
+$$
+\boldsymbol{\theta}^{(t+1)} = \boldsymbol{\theta}^{(t)} - \eta \nabla f(\boldsymbol{\theta}^{(t)}),
+$$
+
+where:
+- $t$ is the iteration index,
+- $\eta$ is the learning rate, a small positive scalar that determines the step size.
+
+#### Intuition
+- The term $\nabla f(\boldsymbol{\theta}^{(t)})$ gives the direction of steepest ascent. To minimize $f$, we move in the opposite direction, $-\nabla f(\boldsymbol{\theta}^{(t)})$.
+- The learning rate $\eta$ controls how far we move along this direction in each iteration. A small $\eta$ ensures stability but may converge slowly, while a large $\eta$ may overshoot the minimum or diverge.
+
+#### Convergence
+Gradient descent converges to a local minimum if:
+1. $f(\boldsymbol{\theta})$ is differentiable,
+2. $\eta$ is chosen appropriately,
+3. The gradient $\nabla f(\boldsymbol{\theta})$ does not vanish.
+
+#### Example
+Consider a simple quadratic function:
+
+$$
+f(\theta) = \frac{1}{2} \theta^2.
+$$
+
+The gradient is:
+
+$$
+\nabla f(\theta) = \frac{\partial f}{\partial \theta} = \theta.
+$$
+
+The update rule becomes:
+
+$$
+\theta^{(t+1)} = \theta^{(t)} - \eta \theta^{(t)}.
+$$
+
+After $t$ iterations:
+
+$$
+\theta^{(t)} = (1 - \eta)^t \theta^{(0)}.
+$$
+
+As $t \to \infty$, $\theta^{(t)} \to 0$, provided $0 < \eta < 2$).
+
+This illustrates how gradient descent converges to the minimum $\theta = 0$.
+
 ## Course 1. Neural Networks and Deep Learning 
 
 
